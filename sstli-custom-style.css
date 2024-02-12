@@ -1,0 +1,130 @@
+/* sstli-custom-plugin-style.css */
+h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.accordion {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    background-color: #fff;
+    color: #111;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+
+.accordion-item-header {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    min-height: 3.5rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.accordion-item-header::after {
+    content: "\002B";
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+}
+
+.accordion-item-header.active::after {
+    content: "\2212";
+}
+
+.accordion-item-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+    padding: 1rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+@media(max-width:767px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media(min-width:768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/* Custom styles for branches archive page */
+
+.container {
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+.branches-archive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -15px; /* Add negative margin to compensate for the default margin on columns */
+    padding: 50px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.branch-archive-item {
+    width: calc(50% - 30px); /* Set width for each branch item (50% - margin) */
+    margin: 15px; /* Add margin between branch items */
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Add a background color for better readability */
+    padding: 20px; /* Add padding to the branch items */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+    overflow: hidden; /* Hide overflow for consistent styling */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.branch-archive-item:hover {
+    transform: scale(1.05); /* Scale up the branch item on hover for a subtle effect */
+}
+
+.branch-thumbnail {
+    max-height: 200px; /* Set a maximum height for the branch thumbnail images */
+    overflow: hidden; /* Hide overflow for consistent styling */
+}
+
+.branch-thumbnail img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add border-radius for rounded corners */
+}
+
+.branch-details {
+    margin-top: 15px;
+}
+
+/* Clearfix to ensure proper styling */
+.row-start {
+    clear: both;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 767px) {
+    .branch-archive-item {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
